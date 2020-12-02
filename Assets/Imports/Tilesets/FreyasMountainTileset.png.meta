@@ -1,0 +1,2318 @@
+fileFormatVersion: 2
+guid: 53c7c7ee941170f519c7ec2d6a147e3f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 889589086728718890
+    second: FreyasMountainTileset_0
+  - first:
+      213: -341869278214026874
+    second: FreyasMountainTileset_1
+  - first:
+      213: 5182843502213501387
+    second: FreyasMountainTileset_2
+  - first:
+      213: 539166748108748515
+    second: FreyasMountainTileset_3
+  - first:
+      213: -1735134248246633848
+    second: FreyasMountainTileset_4
+  - first:
+      213: 5963845697770357654
+    second: FreyasMountainTileset_5
+  - first:
+      213: 5444526716803671495
+    second: FreyasMountainTileset_6
+  - first:
+      213: -6289222621690273538
+    second: FreyasMountainTileset_7
+  - first:
+      213: -6191896469507196109
+    second: FreyasMountainTileset_8
+  - first:
+      213: -1858636989211712854
+    second: FreyasMountainTileset_9
+  - first:
+      213: -3770089673385990294
+    second: FreyasMountainTileset_10
+  - first:
+      213: -4219285659495869125
+    second: FreyasMountainTileset_11
+  - first:
+      213: 8112685305938794449
+    second: FreyasMountainTileset_12
+  - first:
+      213: -8997231265690874705
+    second: FreyasMountainTileset_13
+  - first:
+      213: -1236141890935160225
+    second: FreyasMountainTileset_14
+  - first:
+      213: 8847889378740429873
+    second: FreyasMountainTileset_15
+  - first:
+      213: -2950192999609497998
+    second: FreyasMountainTileset_16
+  - first:
+      213: -5991020554842925175
+    second: FreyasMountainTileset_17
+  - first:
+      213: 8839111475465689198
+    second: FreyasMountainTileset_18
+  - first:
+      213: 4575835022881158104
+    second: FreyasMountainTileset_19
+  - first:
+      213: -6309860652077490742
+    second: FreyasMountainTileset_20
+  - first:
+      213: -4188447576156784872
+    second: FreyasMountainTileset_21
+  - first:
+      213: -1889087959895859735
+    second: FreyasMountainTileset_22
+  - first:
+      213: 5534519782767581832
+    second: FreyasMountainTileset_23
+  - first:
+      213: 2664536178503479485
+    second: FreyasMountainTileset_24
+  - first:
+      213: -349820464362095530
+    second: FreyasMountainTileset_25
+  - first:
+      213: -4551385593476828405
+    second: FreyasMountainTileset_26
+  - first:
+      213: -4957158907413425532
+    second: FreyasMountainTileset_27
+  - first:
+      213: -6014825736884885833
+    second: FreyasMountainTileset_28
+  - first:
+      213: 7506247753198395946
+    second: FreyasMountainTileset_29
+  - first:
+      213: -6154340987485653238
+    second: FreyasMountainTileset_30
+  - first:
+      213: 4640906261371026306
+    second: FreyasMountainTileset_31
+  - first:
+      213: 6559321101496437500
+    second: FreyasMountainTileset_32
+  - first:
+      213: -2461718159545991219
+    second: FreyasMountainTileset_33
+  - first:
+      213: 2875585778914113520
+    second: FreyasMountainTileset_34
+  - first:
+      213: -1418835406584984804
+    second: FreyasMountainTileset_35
+  - first:
+      213: -8156859388933266033
+    second: FreyasMountainTileset_36
+  - first:
+      213: 7058706672645215613
+    second: FreyasMountainTileset_37
+  - first:
+      213: 5009897056733223632
+    second: FreyasMountainTileset_38
+  - first:
+      213: -7816996072660336007
+    second: FreyasMountainTileset_39
+  - first:
+      213: 5616994191165953977
+    second: FreyasMountainTileset_40
+  - first:
+      213: 6987510784261985774
+    second: FreyasMountainTileset_41
+  - first:
+      213: -1073197174018510386
+    second: FreyasMountainTileset_42
+  - first:
+      213: -1518339466188360591
+    second: FreyasMountainTileset_43
+  - first:
+      213: 558298989478563522
+    second: FreyasMountainTileset_44
+  - first:
+      213: 5650631592030883753
+    second: FreyasMountainTileset_45
+  - first:
+      213: 7104580408244034595
+    second: FreyasMountainTileset_46
+  - first:
+      213: 3554307865273535832
+    second: FreyasMountainTileset_47
+  - first:
+      213: 1753456593619291212
+    second: FreyasMountainTileset_48
+  - first:
+      213: 4842026399096804580
+    second: FreyasMountainTileset_49
+  - first:
+      213: 838187024623967596
+    second: FreyasMountainTileset_50
+  - first:
+      213: 5520967718235157559
+    second: FreyasMountainTileset_51
+  - first:
+      213: -1878844735420332067
+    second: FreyasMountainTileset_52
+  - first:
+      213: 3853781911861695903
+    second: FreyasMountainTileset_53
+  - first:
+      213: 5018173068925375358
+    second: FreyasMountainTileset_54
+  - first:
+      213: 8434254373706395077
+    second: FreyasMountainTileset_55
+  - first:
+      213: -2613895714583868546
+    second: FreyasMountainTileset_56
+  - first:
+      213: -849386781373348249
+    second: FreyasMountainTileset_57
+  - first:
+      213: -4805712779322558455
+    second: FreyasMountainTileset_58
+  - first:
+      213: 7637581202585440095
+    second: FreyasMountainTileset_59
+  - first:
+      213: -5431841883874718230
+    second: FreyasMountainTileset_60
+  - first:
+      213: -882615760126275557
+    second: FreyasMountainTileset_61
+  - first:
+      213: -2478515861693822513
+    second: FreyasMountainTileset_62
+  - first:
+      213: 2354658869954036530
+    second: FreyasMountainTileset_63
+  - first:
+      213: -2583963367498079558
+    second: FreyasMountainTileset_64
+  - first:
+      213: -2093925410647722002
+    second: FreyasMountainTileset_65
+  - first:
+      213: -345166772910613590
+    second: FreyasMountainTileset_66
+  - first:
+      213: -6691805819241361205
+    second: FreyasMountainTileset_67
+  - first:
+      213: 9183088476974422444
+    second: FreyasMountainTileset_68
+  - first:
+      213: -5549613572362149798
+    second: FreyasMountainTileset_69
+  - first:
+      213: 5944771385125944478
+    second: FreyasMountainTileset_70
+  - first:
+      213: -3094414803101313742
+    second: FreyasMountainTileset_71
+  - first:
+      213: -1785959628962439266
+    second: FreyasMountainTileset_72
+  - first:
+      213: 38020500762231892
+    second: FreyasMountainTileset_73
+  - first:
+      213: -8905492859891803441
+    second: FreyasMountainTileset_74
+  - first:
+      213: -1509832546585284698
+    second: FreyasMountainTileset_75
+  - first:
+      213: -7394460219520284062
+    second: FreyasMountainTileset_76
+  - first:
+      213: 8223348072592256403
+    second: FreyasMountainTileset_77
+  - first:
+      213: 2481327977812512202
+    second: FreyasMountainTileset_78
+  - first:
+      213: 2828721508802557868
+    second: FreyasMountainTileset_79
+  - first:
+      213: 2908617988028287204
+    second: FreyasMountainTileset_80
+  - first:
+      213: 3797690934365182745
+    second: FreyasMountainTileset_81
+  - first:
+      213: -5079406970305260450
+    second: FreyasMountainTileset_0
+  - first:
+      213: -2867558384574737145
+    second: FreyasMountainTileset_1
+  - first:
+      213: 5510622693711240196
+    second: FreyasMountainTileset_2
+  - first:
+      213: -6555274938947241953
+    second: FreyasMountainTileset_3
+  - first:
+      213: -4729748140334710641
+    second: FreyasMountainTileset_4
+  - first:
+      213: 2779602810159895839
+    second: FreyasMountainTileset_5
+  - first:
+      213: 752214617989226109
+    second: FreyasMountainTileset_6
+  - first:
+      213: 2006501107389208817
+    second: FreyasMountainTileset_7
+  - first:
+      213: -6208949992313605391
+    second: FreyasMountainTileset_8
+  - first:
+      213: -6491651560418086973
+    second: FreyasMountainTileset_9
+  - first:
+      213: -2420160731986808005
+    second: FreyasMountainTileset_10
+  - first:
+      213: -814142660653676160
+    second: FreyasMountainTileset_11
+  - first:
+      213: 3932510685071038092
+    second: FreyasMountainTileset_12
+  - first:
+      213: -2846502689836682474
+    second: FreyasMountainTileset_13
+  - first:
+      213: 6550827437351996023
+    second: FreyasMountainTileset_14
+  - first:
+      213: -8105650426873495242
+    second: FreyasMountainTileset_15
+  - first:
+      213: -5880831322243553647
+    second: FreyasMountainTileset_16
+  - first:
+      213: 107284069816243018
+    second: FreyasMountainTileset_17
+  - first:
+      213: -4802965607080377243
+    second: FreyasMountainTileset_18
+  - first:
+      213: 5697539523760408683
+    second: FreyasMountainTileset_19
+  - first:
+      213: 7645273251836549069
+    second: FreyasMountainTileset_20
+  - first:
+      213: -7659491437050047210
+    second: FreyasMountainTileset_21
+  - first:
+      213: 5274274203780344674
+    second: FreyasMountainTileset_22
+  - first:
+      213: 8482248796594044229
+    second: FreyasMountainTileset_23
+  - first:
+      213: -6193214767026553381
+    second: FreyasMountainTileset_24
+  - first:
+      213: -6036791826512425801
+    second: FreyasMountainTileset_25
+  - first:
+      213: 632232339209372630
+    second: FreyasMountainTileset_26
+  - first:
+      213: 2949773329578585711
+    second: FreyasMountainTileset_27
+  - first:
+      213: 191595837593871298
+    second: FreyasMountainTileset_28
+  - first:
+      213: 2202289305200106343
+    second: FreyasMountainTileset_29
+  - first:
+      213: -3749962226162750481
+    second: FreyasMountainTileset_30
+  - first:
+      213: 6743704643004904626
+    second: FreyasMountainTileset_31
+  - first:
+      213: -4983841624793883738
+    second: FreyasMountainTileset_32
+  - first:
+      213: 8505703451053001056
+    second: FreyasMountainTileset_33
+  - first:
+      213: 4470198912357303953
+    second: FreyasMountainTileset_34
+  - first:
+      213: -5974248375654123696
+    second: FreyasMountainTileset_35
+  - first:
+      213: -911515548576527138
+    second: FreyasMountainTileset_36
+  - first:
+      213: 6144022517607567086
+    second: FreyasMountainTileset_37
+  - first:
+      213: -1789061165306955238
+    second: FreyasMountainTileset_38
+  - first:
+      213: 2445072992181348082
+    second: FreyasMountainTileset_39
+  - first:
+      213: 7911889013680714793
+    second: FreyasMountainTileset_40
+  - first:
+      213: 3197968315786045380
+    second: FreyasMountainTileset_41
+  - first:
+      213: -7633418450971300890
+    second: FreyasMountainTileset_42
+  - first:
+      213: 6120133041224865421
+    second: FreyasMountainTileset_43
+  - first:
+      213: 2164276310743323424
+    second: FreyasMountainTileset_44
+  - first:
+      213: -7967187718405983852
+    second: FreyasMountainTileset_45
+  - first:
+      213: 4364959537966622330
+    second: FreyasMountainTileset_46
+  - first:
+      213: 1380066680436855867
+    second: FreyasMountainTileset_47
+  - first:
+      213: 1596231077569794171
+    second: FreyasMountainTileset_48
+  - first:
+      213: -7850267284608947329
+    second: FreyasMountainTileset_49
+  - first:
+      213: -522949156608342109
+    second: FreyasMountainTileset_50
+  - first:
+      213: 8268110300401440829
+    second: FreyasMountainTileset_51
+  - first:
+      213: 7642912983383883969
+    second: FreyasMountainTileset_52
+  - first:
+      213: -4488317667776226812
+    second: FreyasMountainTileset_53
+  - first:
+      213: 9030196348469410865
+    second: FreyasMountainTileset_54
+  - first:
+      213: -5114365756004408945
+    second: FreyasMountainTileset_55
+  - first:
+      213: -916158665666365299
+    second: FreyasMountainTileset_56
+  - first:
+      213: 7455053596014344750
+    second: FreyasMountainTileset_57
+  - first:
+      213: 4138379488286286439
+    second: FreyasMountainTileset_58
+  - first:
+      213: 4507144229849855682
+    second: FreyasMountainTileset_59
+  - first:
+      213: -1512714426431545458
+    second: FreyasMountainTileset_60
+  - first:
+      213: -5792267163010503204
+    second: FreyasMountainTileset_61
+  - first:
+      213: -4054668515865469155
+    second: FreyasMountainTileset_62
+  - first:
+      213: 3564669142863947345
+    second: FreyasMountainTileset_63
+  - first:
+      213: 3699492611681608761
+    second: FreyasMountainTileset_64
+  - first:
+      213: -7442440008720599064
+    second: FreyasMountainTileset_65
+  - first:
+      213: -6535911580486219647
+    second: FreyasMountainTileset_66
+  - first:
+      213: -7060527679852111219
+    second: FreyasMountainTileset_67
+  - first:
+      213: -8857547731150162226
+    second: FreyasMountainTileset_68
+  - first:
+      213: -3579127155853984632
+    second: FreyasMountainTileset_69
+  - first:
+      213: 5675871720240909683
+    second: FreyasMountainTileset_70
+  - first:
+      213: -9127831698418186335
+    second: FreyasMountainTileset_71
+  - first:
+      213: 1475789588665335958
+    second: FreyasMountainTileset_72
+  - first:
+      213: 2889717363931848288
+    second: FreyasMountainTileset_73
+  - first:
+      213: 5027797468200920330
+    second: FreyasMountainTileset_74
+  - first:
+      213: -7168184991120403347
+    second: FreyasMountainTileset_75
+  - first:
+      213: 1164337415501617955
+    second: FreyasMountainTileset_76
+  - first:
+      213: -8901726455105656878
+    second: FreyasMountainTileset_77
+  - first:
+      213: 2941989938418203828
+    second: FreyasMountainTileset_78
+  - first:
+      213: 3214753793612885376
+    second: FreyasMountainTileset_79
+  - first:
+      213: 3941070796149352939
+    second: FreyasMountainTileset_80
+  - first:
+      213: 8514262986165271992
+    second: FreyasMountainTileset_81
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FreyasMountainTileset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54df49b5425289b0800000000000000
+      internalID: -5079406970305260450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705daba97d26438d0800000000000000
+      internalID: -2867558384574737145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c5dd5b42aa97c40800000000000000
+      internalID: 5510622693711240196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f187703ac2cf605a0800000000000000
+      internalID: -6555274938947241953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80094a202f8c5eb0800000000000000
+      internalID: -4729748140334710641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1512446702239620800000000000000
+      internalID: 2779602810159895839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e9a1ca537607a00800000000000000
+      internalID: 752214617989226109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f89c53502688db10800000000000000
+      internalID: 2006501107389208817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2bbffd0e065d9a0800000000000000
+      internalID: -6208949992313605391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf6bafcc4509e5a0800000000000000
+      internalID: -6491651560418086973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33b39603acd96ed0800000000000000
+      internalID: -2420160731986808005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0890f3b409593b4f0800000000000000
+      internalID: -814142660653676160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_12
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86561bf1a5139630800000000000000
+      internalID: 3932510685071038092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613371092e03f78d0800000000000000
+      internalID: -2846502689836682474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a8f34b8d639ea50800000000000000
+      internalID: 6550827437351996023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_15
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63146b0e1e1f28f80800000000000000
+      internalID: -8105650426873495242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196aea50217136ea0800000000000000
+      internalID: -5880831322243553647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4394770b462d7100800000000000000
+      internalID: 107284069816243018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5644e814a30785db0800000000000000
+      internalID: -4802965607080377243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_19
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68cc7f820ab11f40800000000000000
+      internalID: 5697539523760408683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc753822487791a60800000000000000
+      internalID: 7645273251836549069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_21
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6155c76ae1504b590800000000000000
+      internalID: -7659491437050047210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b655ca17cf13940800000000000000
+      internalID: 5274274203780344674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_23
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54df871f65007b570800000000000000
+      internalID: 8482248796594044229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bddbda18bf74d0aa0800000000000000
+      internalID: -6193214767026553381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_25
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bccebd61d1093ca0800000000000000
+      internalID: -6036791826512425801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3c61a76f326c800800000000000000
+      internalID: 632232339209372630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_27
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ee375f633bfe820800000000000000
+      internalID: 2949773329578585711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3e930366fa8a200800000000000000
+      internalID: 191595837593871298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 720
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b1811747a109e10800000000000000
+      internalID: 2202289305200106343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_30
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 720
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: febaf64393575fbc0800000000000000
+      internalID: -3749962226162750481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_31
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 720
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4b574a4a3769d50800000000000000
+      internalID: 6743704643004904626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_32
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 720
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6abda51a276d5dab0800000000000000
+      internalID: -4983841624793883738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_33
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 720
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06904dc39345a0670800000000000000
+      internalID: 8505703451053001056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19605660a36590e30800000000000000
+      internalID: 4470198912357303953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_35
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0577e2951c4371da0800000000000000
+      internalID: -5974248375654123696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_36
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcc9df1075a953f0800000000000000
+      internalID: -911515548576527138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_37
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee00066de3f34550800000000000000
+      internalID: 6144022517607567086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_38
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1abe68595afb27e0800000000000000
+      internalID: -1789061165306955238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6eedc8ee4aee120800000000000000
+      internalID: 2445072992181348082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_40
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92431c2932daccd60800000000000000
+      internalID: 7911889013680714793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_41
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7a1695d37716c20800000000000000
+      internalID: 3197968315786045380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_42
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb61f7cc56a01690800000000000000
+      internalID: -7633418450971300890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_43
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86d65c33941fe450800000000000000
+      internalID: 6120133041224865421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_44
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02316a976dd090e10800000000000000
+      internalID: 2164276310743323424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_45
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4917e896bfcde6190800000000000000
+      internalID: -7967187718405983852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_46
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76247fb293739c30800000000000000
+      internalID: 4364959537966622330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_47
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b349acd755bf62310800000000000000
+      internalID: 1380066680436855867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_48
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b709cf535b3f62610800000000000000
+      internalID: 1596231077569794171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b63054f7f3e0390800000000000000
+      internalID: -7850267284608947329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a705c4438c1eb8f0800000000000000
+      internalID: -522949156608342109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_51
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d381d2b038a3eb270800000000000000
+      internalID: 8268110300401440829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_52
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c041df4dd4111a60800000000000000
+      internalID: 7642912983383883969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_53
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a961d7cda46b1c0800000000000000
+      internalID: -4488317667776226812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_54
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c7c822cb3b15d70800000000000000
+      internalID: 9030196348469410865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_55
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f816fe5217f1609b0800000000000000
+      internalID: -5114365756004408945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_56
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d887f0f2c862943f0800000000000000
+      internalID: -916158665666365299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_57
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2afeeb3fbba57760800000000000000
+      internalID: 7455053596014344750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_58
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7622111f73a7e6930800000000000000
+      internalID: 4138379488286286439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_59
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6f6a31cc79c8e30800000000000000
+      internalID: 4507144229849855682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_60
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f50fd6e32c10be0800000000000000
+      internalID: -1512714426431545458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_61
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd699834bbbd9fa0800000000000000
+      internalID: -5792267163010503204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1fd0e5a77ceab7c0800000000000000
+      internalID: -4054668515865469155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_63
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156a332f2bf387130800000000000000
+      internalID: 3564669142863947345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_64
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934e678fdec375330800000000000000
+      internalID: 3699492611681608761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_65
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7bd0a6e3427b890800000000000000
+      internalID: -7442440008720599064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_66
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188c1c9db07cb45a0800000000000000
+      internalID: -6535911580486219647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_67
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a1a93cb77f30e90800000000000000
+      internalID: -7060527679852111219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_68
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec63abf844ba31580800000000000000
+      internalID: -8857547731150162226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_69
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c7e5590d2645ec0800000000000000
+      internalID: -3579127155853984632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_70
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d05abe14fb4ce40800000000000000
+      internalID: 5675871720240909683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_71
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7cb3e7e6d635180800000000000000
+      internalID: -9127831698418186335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_72
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6900e93dfce0b7410800000000000000
+      internalID: 1475789588665335958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_73
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e9f62d1a65a1820800000000000000
+      internalID: 2889717363931848288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_74
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0569bea82356c540800000000000000
+      internalID: 5027797468200920330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_75
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d645bffaabd758c90800000000000000
+      internalID: -7168184991120403347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_76
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b9ba1e5be882010800000000000000
+      internalID: 1164337415501617955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_77
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7eab3d3f6b67480800000000000000
+      internalID: -8901726455105656878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_78
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bcb03cf24c04d820800000000000000
+      internalID: 2941989938418203828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_79
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08da2a4fa891d9c20800000000000000
+      internalID: 3214753793612885376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_80
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9e527220f71b630800000000000000
+      internalID: 3941070796149352939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FreyasMountainTileset_81
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd33ae431db82670800000000000000
+      internalID: 8514262986165271992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
