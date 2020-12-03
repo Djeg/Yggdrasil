@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using UnityEngine;
 using Yggdrasil.Core.Physic;
-using Yggdrasil.Component.Character.Action;
 
 namespace Yggdrasil.Component.Character
 {
@@ -11,6 +10,8 @@ namespace Yggdrasil.Component.Character
      * This class contains all the data needed to make a character moove.
      * </summary>
      */
+    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(SpriteRenderer))]
     public class CharacterMovement : MonoBehaviour
     {
         # region Properties
@@ -58,6 +59,20 @@ namespace Yggdrasil.Component.Character
          */
         private bool moving = false;
 
+        /**
+         * <summary>
+         * The rigidbody component attached to this gameObject
+         * </summary>
+         */
+        private Rigidbody2D body = null;
+
+        /**
+         * <summary>
+         * The sprite renderer component attached to this GameObject
+         * </summary>
+         */
+        private SpriteRenderer sprite = null;
+
         # endregion
 
         # region PropertyAccessors
@@ -78,25 +93,25 @@ namespace Yggdrasil.Component.Character
          * Move a character according to the given amount.
          * </summary>
          */
-        public void Move(MoveCharacter motion)
+        public void Move(float horizontalMovement)
         {
-            float movement = motion.horizontalMovement * speed * Time.fixedDeltaTime;
+            float movement = horizontalMovement * speed * Time.fixedDeltaTime;
             Vector2 target = new Vector2(
                 movement,
-                motion.body.velocity.y
+                body.velocity.y
             );
 
 
-            motion.body.velocity = Vector2.SmoothDamp(
-                motion.body.velocity,
+            body.velocity = Vector2.SmoothDamp(
+                body.velocity,
                 target,
                 ref velocity,
                 smoothTime
             );
 
-            UpdateDirection(motion);
+            UpdateDirection(horizontalMovement);
 
-            moving = Math.Abs(motion.horizontalMovement) >= sensibility;
+            moving = Math.Abs(horizontalMovement) >= sensibility;
         }
 
         # endregion
@@ -105,15 +120,26 @@ namespace Yggdrasil.Component.Character
 
         /**
          * <summary>
+         * Awake
+         * </summary>
+         */
+        private void Awake()
+        {
+            body   = GetComponent<Rigidbody2D>();
+            sprite = GetComponent<SpriteRenderer>();
+        }
+
+        /**
+         * <summary>
          * Check if we need to update the direction
          * </summary>
          */
-        private void UpdateDirection(MoveCharacter motion)
+        private void UpdateDirection(float horizontalMovement)
         {
-            if (Math.Abs(motion.horizontalMovement) < sensibility)
+            if (Math.Abs(horizontalMovement) < sensibility)
                 return;
 
-            Direction newDirection = motion.horizontalMovement < sensibility
+            Direction newDirection = horizontalMovement < sensibility
                 ? Direction.LEFT
                 : Direction.RIGHT
             ;
@@ -123,7 +149,7 @@ namespace Yggdrasil.Component.Character
 
             direction = newDirection;
 
-            motion.sprite.transform.Rotate(0f, 180f, 0f);
+            sprite.transform.Rotate(0f, 180f, 0f);
         }
 
         # endregion

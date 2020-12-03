@@ -25,14 +25,14 @@ namespace Yggdrasil.Component.Player
          * Is it jumping
          * </summary>
          */
-        public bool isJumping = false;
+        public bool jumping = false;
 
         /**
          * <summary>
          * Is it attacking
          * </summary>
          */
-        public bool isAttacking = false;
+        public bool attacking = false;
 
         # endregion
 
@@ -46,11 +46,11 @@ namespace Yggdrasil.Component.Player
          * Refresh the input based on the static Input instance
          * </summary>
          */
-        public void Refresh()
+        public void Update()
         {
             horizontalMovement = Input.GetAxis("Horizontal");
-            isJumping          = Input.GetButtonDown("Jump");
-            isAttacking        = Input.GetButtonDown("Fire1");
+            jumping            = Input.GetButtonDown("Jump");
+            attacking          = Input.GetButtonDown("Fire1");
         }
 
         # endregion

@@ -1,10 +1,8 @@
 using System.Collections;
 using UnityEngine;
-using Yggdrasil.Component.Player;
 using Yggdrasil.Component.Character;
-using CharacterAction = Yggdrasil.Component.Character.Action;
 
-namespace Yggdrasil.System
+namespace Yggdrasil.Component.Player
 {
     /**
      * <summary>
@@ -13,10 +11,9 @@ namespace Yggdrasil.System
      * </summary>
      */
     [RequireComponent(typeof(CharacterMovement))]
+    [RequireComponent(typeof(CharacterJump))]
     [RequireComponent(typeof(PlayerInput))]
-    [RequireComponent(typeof(Rigidbody2D))]
-    [RequireComponent(typeof(SpriteRenderer))]
-    public class PlayerSystem : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         # region Properties
 
@@ -36,17 +33,10 @@ namespace Yggdrasil.System
 
         /**
          * <summary>
-         * The rigidbody 2D
+         * The character jump component
          * </summary>
          */
-        private Rigidbody2D body = null;
-
-        /**
-         * <summary>
-         * The sprite renderer
-         * </summary>
-         */
-        private SpriteRenderer sprite = null;
+        private CharacterJump jump = null;
 
         # endregion
 
@@ -67,18 +57,7 @@ namespace Yggdrasil.System
         {
             input    = GetComponent<PlayerInput>();
             movement = GetComponent<CharacterMovement>();
-            body     = GetComponent<Rigidbody2D>();
-            sprite   = GetComponent<SpriteRenderer>();
-        }
-
-        /**
-         * <summary>
-         * Executed on each update
-         * </summary>
-         */
-        private void Update()
-        {
-            input.Refresh();
+            jump     = GetComponent<CharacterJump>();
         }
 
         /**
@@ -88,11 +67,10 @@ namespace Yggdrasil.System
          */
         private void FixedUpdate()
         {
-            movement.Move(new CharacterAction.MoveCharacter {
-                horizontalMovement = input.horizontalMovement,
-                body = body,
-                sprite = sprite
-            });
+            movement.Move(input.horizontalMovement);
+
+            if (input.jumping)
+                jump.Jump();
         }
 
         # endregion
