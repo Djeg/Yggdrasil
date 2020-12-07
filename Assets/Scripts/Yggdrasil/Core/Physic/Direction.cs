@@ -5,7 +5,7 @@ namespace Yggdrasil.Core.Physic
 {
     /**
      * <summary>
-     * Define the available direction of any object in the galme
+     * Define the available direction of any object in the game
      * </summary>
      */
     public enum Direction : int
@@ -15,8 +15,16 @@ namespace Yggdrasil.Core.Physic
         NONE = 0
     }
 
-    public static class DirectionCaster
+    public static class DirectionHelper
     {
         public static float ToFloat(Direction direction) => (float)(int)direction;
+
+        public static Direction Inverse(Direction direction) =>
+            direction == Direction.RIGHT
+                ? Direction.LEFT
+                : direction == Direction.LEFT
+                    ? Direction.RIGHT
+                    : Direction.NONE
+        ;
     }
 }
