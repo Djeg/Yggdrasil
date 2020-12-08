@@ -294,7 +294,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 307003036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3793f30139c37eaa18e23551241239ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 264d206977b177dc88aa6fc566f52c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &307003040
@@ -306,12 +306,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 307003036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a402ae7dea56eaba4edd4926a02194, type: 3}
+  m_Script: {fileID: 11500000, guid: b6a9c3ea397763be4904494eb67ea339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parallaxData:
+  _parallax:
     scrollingIntensity: {x: 0.8, y: 0.8}
     movementIntensity: {x: -1, y: 0}
+    repeatX: 1
     repeatY: 1
     mainCamera: {fileID: 519420031}
     lastCameraPosition: {x: 0, y: 0, z: 0}
@@ -5069,7 +5070,11 @@ GameObject:
   - component: {fileID: 637875157}
   - component: {fileID: 637875161}
   - component: {fileID: 637875163}
+  - component: {fileID: 637875166}
+  - component: {fileID: 637875165}
+  - component: {fileID: 637875164}
   - component: {fileID: 637875162}
+  - component: {fileID: 637875167}
   m_Layer: 0
   m_Name: Aestrid
   m_TagString: Untagged
@@ -5206,73 +5211,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 637875156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc463cf2d9bc33f23adda274934b9efc, type: 3}
+  m_Script: {fileID: 11500000, guid: c47e6d5fa72f8aee2823ebd2aaeaf019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _terestrialMovement:
-    speed: 450
-    smoothTime: 0.1
-    isFrozen: 0
-    currentMovement: 0
-    direction: 1
-    velocity: {x: 0, y: 0}
-    jumpForce: 1700
-    jumping: 0
-    falling: 0
-    groundRaycastLength: 1.56
-    groundLayer:
-      serializedVersion: 2
-      m_Bits: 256
-    requestJump: 0
-  _hitBoxCollection:
-    layer:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    boxes:
-    - offsetX: 0.602
-      offsetY: -0.2
-      radius: 0.787
-      debug: 0
-      color: {r: 1, g: 0, b: 0, a: 1}
-      onHit:
-        m_PersistentCalls:
-          m_Calls: []
-      requestHit: 0
-    - offsetX: 0.12
-      offsetY: -0.29
-      radius: 1.038
-      debug: 0
-      color: {r: 1, g: 0, b: 0, a: 1}
-      onHit:
-        m_PersistentCalls:
-          m_Calls: []
-      requestHit: 0
-    - offsetX: 0.79
-      offsetY: -0.38
-      radius: 0.621
-      debug: 0
-      color: {r: 1, g: 0, b: 0, a: 1}
-      onHit:
-        m_PersistentCalls:
-          m_Calls: []
-      requestHit: 0
-    - offsetX: 0
-      offsetY: -0.16
-      radius: 1.127
-      debug: 0
-      color: {r: 1, g: 0, b: 0, a: 1}
-      onHit:
-        m_PersistentCalls:
-          m_Calls: []
-      requestHit: 0
-    index: 0
-  _aestridInputJob:
-    _moveInputName: Move
-    _jumpInputName: Jump
-  _aestridAnimatorJob:
-    _horizontalMovementFloatName: HorizontalMovement
-    _jumpingBooleanName: Jumping
-    _fallingBooleanName: Falling
+  _moveInputName: Move
+  _jumpInputName: Jump
+  _attackInputName: Attack
 --- !u!114 &637875163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5319,6 +5263,134 @@ MonoBehaviour:
   m_DefaultActionMap: Plateformer
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &637875164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637875156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add4f4da86b533fcf8ccc4f50556c12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _horizontalMovementFloatName: HorizontalMovement
+  _jumpingBooleanName: Jumping
+  _fallingBooleanName: Falling
+  _attackTriggerName: Attack
+  _isAttackingBoolName: Attacking
+--- !u!114 &637875165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637875156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4939a017e9d8bfe898b7cae2fdeea784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &637875166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637875156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60338107887f3fad6a7b61abf8a1d0f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movement:
+    speed: 450
+    smoothTime: 0.1
+    isFrozen: 0
+    currentMovement: 0
+    direction: 1
+    velocity: {x: 0, y: 0}
+    jumpForce: 1700
+    jumping: 0
+    falling: 0
+    groundRaycastLength: 1.5
+    groundLayer:
+      serializedVersion: 2
+      m_Bits: 256
+    requestJump: 0
+  _attacks:
+    layer:
+      serializedVersion: 2
+      m_Bits: 0
+    boxes:
+    - offsetX: 0.33
+      offsetY: -0.2
+      radius: 1.007
+      isFrozenMovement: 1
+      canBeInterupted: 0
+      pulseForce: {x: 15, y: 0}
+      automaticPulse: 1
+      debug: 0
+      color: {r: 0.7372549, g: 0, b: 0, a: 1}
+      onHit:
+        m_PersistentCalls:
+          m_Calls: []
+      requestHit: 0
+    - offsetX: 0.11
+      offsetY: -0.19
+      radius: 1.101
+      isFrozenMovement: 1
+      canBeInterupted: 0
+      pulseForce: {x: 10, y: 0}
+      automaticPulse: 1
+      debug: 0
+      color: {r: 1, g: 0, b: 0, a: 1}
+      onHit:
+        m_PersistentCalls:
+          m_Calls: []
+      requestHit: 0
+    - offsetX: 0.73
+      offsetY: -0.39
+      radius: 0.708
+      isFrozenMovement: 1
+      canBeInterupted: 0
+      pulseForce: {x: 35, y: 0}
+      automaticPulse: 1
+      debug: 0
+      color: {r: 1, g: 0, b: 0, a: 1}
+      onHit:
+        m_PersistentCalls:
+          m_Calls: []
+      requestHit: 0
+    - offsetX: 0
+      offsetY: -0.15
+      radius: 1.133
+      isFrozenMovement: 1
+      canBeInterupted: 0
+      pulseForce: {x: 20, y: 0}
+      automaticPulse: 1
+      debug: 0
+      color: {r: 1, g: 0, b: 0, a: 1}
+      onHit:
+        m_PersistentCalls:
+          m_Calls: []
+      requestHit: 0
+    index: 0
+    isFrozen: 0
+    requestHit: 0
+--- !u!114 &637875167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637875156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eec078bb60a77161aeda6af7cd9c5da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &732082215
 GameObject:
   m_ObjectHideFlags: 0
@@ -6694,7 +6766,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 808852608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3793f30139c37eaa18e23551241239ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 264d206977b177dc88aa6fc566f52c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &808852612
@@ -6706,12 +6778,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 808852608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a402ae7dea56eaba4edd4926a02194, type: 3}
+  m_Script: {fileID: 11500000, guid: b6a9c3ea397763be4904494eb67ea339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parallaxData:
+  _parallax:
     scrollingIntensity: {x: 0.5, y: 0.5}
     movementIntensity: {x: 0, y: 0}
+    repeatX: 1
     repeatY: 0
     mainCamera: {fileID: 519420031}
     lastCameraPosition: {x: 0, y: 0, z: 0}
@@ -6876,7 +6949,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1011176663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3793f30139c37eaa18e23551241239ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 264d206977b177dc88aa6fc566f52c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1011176667
@@ -6888,12 +6961,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1011176663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a402ae7dea56eaba4edd4926a02194, type: 3}
+  m_Script: {fileID: 11500000, guid: b6a9c3ea397763be4904494eb67ea339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parallaxData:
+  _parallax:
     scrollingIntensity: {x: 0.6, y: 0.6}
     movementIntensity: {x: 2, y: 0}
+    repeatX: 1
     repeatY: 1
     mainCamera: {fileID: 519420031}
     lastCameraPosition: {x: 0, y: 0, z: 0}
@@ -7180,7 +7254,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2075352917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3793f30139c37eaa18e23551241239ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 264d206977b177dc88aa6fc566f52c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2075352921
@@ -7192,12 +7266,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2075352917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a402ae7dea56eaba4edd4926a02194, type: 3}
+  m_Script: {fileID: 11500000, guid: b6a9c3ea397763be4904494eb67ea339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parallaxData:
+  _parallax:
     scrollingIntensity: {x: 0.9, y: 0.9}
     movementIntensity: {x: 0, y: 0}
+    repeatX: 1
     repeatY: 0
     mainCamera: {fileID: 519420031}
     lastCameraPosition: {x: 0, y: 0, z: 0}
