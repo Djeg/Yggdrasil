@@ -31,6 +31,14 @@ namespace Container
         [SerializeField]
         private AttackCollectionData _attacks;
 
+        /**
+         * <summary>
+         * Contains the character statistics
+         * </summary>
+         */
+        [SerializeField]
+        private CharacterStatData _stat;
+
         # endregion
 
         # region PropertyAccessors

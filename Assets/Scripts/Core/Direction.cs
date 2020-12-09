@@ -27,5 +27,13 @@ namespace Core
                     ? Direction.RIGHT
                     : Direction.NONE
         ;
+
+        public static Vector2 ToVector2(Direction direction) =>
+            direction == Direction.RIGHT
+                ? Vector2.right
+                : direction == Direction.LEFT
+                    ? Vector2.left
+                    : Vector2.zero
+        ;
     }
 }

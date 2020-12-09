@@ -117,6 +117,14 @@ namespace Data
 
         /**
          * <summary>
+         * Does this character is hurt
+         * </summary>
+         */
+        [HideInInspector]
+        public bool isHurt = false;
+
+        /**
+         * <summary>
          * Test if the movement has changed direction
          * </summary>
          */

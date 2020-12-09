@@ -85,6 +85,8 @@ namespace Animation
          */
         override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            _attacks.isFrozen = false;
+
             if (_attacks.Hit.isFrozenMovement)
                 _movement.isFrozen = false;
 

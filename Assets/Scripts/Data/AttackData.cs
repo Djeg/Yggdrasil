@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Event;
+using Core;
 
 namespace Data
 {
@@ -69,6 +70,13 @@ namespace Data
 
         /**
          * <summary>
+         * The force to apply on the target victim
+         * </summary>
+         */
+        public Vector2 force = Vector2.zero;
+
+        /**
+         * <summary>
          * Auto trigger the pulse force
          * </summary>
          */
@@ -111,6 +119,33 @@ namespace Data
         # endregion
 
         # region PropertyAccessors
+        # endregion
+
+        # region PublicMethods
+
+        /**
+         * <summary>
+         * Return the offset has a Vector3 according to the given direction
+         * </summary>
+         */
+        public Vector3 GetOffset(Direction direction = Direction.RIGHT) =>
+            new Vector3(
+                direction == Direction.RIGHT ? offsetX : -offsetX,
+                offsetY,
+                0
+            );
+
+        /**
+         * <summary>
+         * Return the depending on the direction
+         * </summary>
+         */
+        public Vector2 GetForce(Direction direction = Direction.RIGHT) =>
+            new Vector2(
+                direction == Direction.RIGHT ? force.x : -force.x,
+                force.y
+            );
+
         # endregion
     }
 }

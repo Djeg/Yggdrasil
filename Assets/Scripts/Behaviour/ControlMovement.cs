@@ -102,11 +102,12 @@ namespace Behaviour
          */
         private void OnDrawGizmosSelected()
         {
-            Gizmos.color = Color.blue;
+            MovementData movement = GetData<MovementData>();
+            Gizmos.color          = Color.blue;
 
             Vector3 target = new Vector3(
                 transform.position.x,
-                transform.position.y - _movement.groundRaycastLength,
+                transform.position.y - movement.groundRaycastLength,
                 transform.position.z
             );
 
@@ -148,7 +149,7 @@ namespace Behaviour
             if (_movement.HasChangedDirection)
             {
                 _movement.direction = DirectionHelper.Inverse(_movement.direction);
-                _renderer.transform.Rotate(0f, 180f, 0f);
+                _renderer.flipX = !_renderer.flipX;
             }
         }
 

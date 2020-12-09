@@ -11,6 +11,7 @@ namespace Behaviour
      * </summary>
      */
     [RequireData(typeof(AttackCollectionData))]
+    [RequireData(typeof(MovementData))]
     public class ControlAttackCollection : MonoDataBehaviour
     {
         # region Properties
@@ -21,6 +22,13 @@ namespace Behaviour
          * </summary>
          */
         private AttackCollectionData _attacks;
+
+        /**
+         * <summary>
+         * The movement data
+         * </summary>
+         */
+        private MovementData _movement;
 
         # endregion
 
@@ -36,14 +44,8 @@ namespace Behaviour
          */
         public void TriggerHit()
         {
-            Vector3 center = new Vector3(
-                transform.position.x + _attacks.Hit.offsetX,
-                transform.position.y + _attacks.Hit.offsetY,
-                transform.position.z
-            );
-
             Collider2D[] colliders = Physics2D.OverlapCircleAll(
-                center,
+                GetCenter(),
                 _attacks.Hit.radius,
                 _attacks.layer
             );
@@ -96,7 +98,24 @@ namespace Behaviour
          */
         protected override void Init(MonoDataContainer container)
         {
-            _attacks = GetData<AttackCollectionData>();
+            _attacks  = GetData<AttackCollectionData>();
+            _movement = GetData<MovementData>();
+        }
+
+        /**
+         * <inheritdoc/>
+         */
+        private void OnEnable()
+        {
+            _attacks.AddListener(HandleAttackForce);
+        }
+
+        /**
+         * <inheritdoc/>
+         */
+        private void OnDisable()
+        {
+            _attacks.RemoveListener(HandleAttackForce);
         }
 
         /**
@@ -104,25 +123,57 @@ namespace Behaviour
          */
         private void OnDrawGizmosSelected()
         {
-            AttackCollectionData attacks = GetData<AttackCollectionData>();
+            if (null == _attacks)
+                _attacks = GetData<AttackCollectionData>();
 
-            if (null == attacks)
-                return;
+            int index = 0;
 
-            attacks
+            _attacks
                 .boxes
                 .FindAll(b => b.debug)
                 .ForEach(b => {
                     Gizmos.color   = b.color;
-                    Vector3 center = new Vector3(
-                        transform.position.x + b.offsetX,
-                        transform.position.y + b.offsetY,
-                        transform.position.z
-                    );
+                    Vector3 center = GetCenter(index);
 
                     Gizmos.DrawWireSphere(center, b.radius);
+
+                    index += 1;
                 })
             ;
+        }
+
+        /**
+         * <summary>
+         * Retrieve the center point of the circle collider
+         * </summary>
+         */
+        private Vector3 GetCenter() => GetCenter(_attacks.index);
+        private Vector3 GetCenter(int index)
+        {
+            if (null == _movement)
+                _movement = GetData<MovementData>();
+
+            if (null == _attacks)
+                _attacks = GetData<AttackCollectionData>();
+
+            AttackData hit = _attacks.boxes[index];
+
+            return transform.position + hit.GetOffset(_movement.direction);
+        }
+
+        /**
+         * <summary>
+         * Handle the attack force on a victim
+         * </summary>
+         */
+        private void HandleAttackForce(GameObject attacker, GameObject victim)
+        {
+            Rigidbody2D body = victim.GetComponent<Rigidbody2D>();
+
+            if (null == body)
+                return;
+
+            body.AddForce(_attacks.Hit.GetForce(_movement.direction), ForceMode2D.Impulse);
         }
 
         # endregion
