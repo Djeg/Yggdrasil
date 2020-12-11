@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using Core;
 using Data;
@@ -93,25 +94,25 @@ namespace Behaviour
          */
         private void FixedUpdate()
         {
+            HandleData();
             HandleMove();
             HandleJump();
+            HandleDirection();
+            HandleDash();
         }
 
         /**
-         * <inheritdoc/>
+         * <summary>
+         * Handle the data of the movement data
+         * </summary>
          */
-        private void OnDrawGizmosSelected()
+        private void HandleData()
         {
-            MovementData movement = GetData<MovementData>();
-            Gizmos.color          = Color.blue;
-
-            Vector3 target = new Vector3(
-                transform.position.x,
-                transform.position.y - movement.groundRaycastLength,
-                transform.position.z
-            );
-
-            Gizmos.DrawLine(transform.position, target);
+            _movement.currentVelocity = _body.velocity;
+            _movement.jumping         = IsJumping();
+            _movement.falling         = IsFalling();
+            _movement.blocking        = IsBlocking();
+            _movement.dragging        = _movement.falling && _movement.blocking;
         }
 
         /**
@@ -144,13 +145,6 @@ namespace Behaviour
                 ref _movement.velocity,
                 _movement.smoothTime
             );
-
-            // we update the direction
-            if (_movement.HasChangedDirection)
-            {
-                _movement.direction = DirectionHelper.Inverse(_movement.direction);
-                _renderer.flipX = !_renderer.flipX;
-            }
         }
 
         /**
@@ -160,16 +154,101 @@ namespace Behaviour
          */
         private void HandleJump()
         {
-            _movement.jumping = IsJumping();
-            _movement.falling = IsFalling();
+            _body.drag = _movement.dragging ? _movement.dragIntensity : 0f;
 
             if (_movement.isFrozen)
                 return;
 
-            if (_movement.requestJump && !_movement.jumping)
-                _body.AddForce(Vector2.up * _movement.jumpForce);
+            if (_movement.jumping && !_movement.requestJump && _movement.holdingJump)
+            {
+                if (_movement.jumpTimeCounter > 0)
+                {
+                    _body.velocity = new Vector3(
+                        _body.velocity.x,
+                        1 * _movement.jumpForce
+                    );
 
-            _movement.requestJump = false;
+                    _movement.jumpTimeCounter -= Time.deltaTime;
+                }
+            }
+
+            if (_movement.requestJump && !_movement.jumping)
+            {
+                _body.velocity = new Vector3(
+                    _body.velocity.x,
+                    1 * _movement.jumpForce
+                );
+
+                _movement.requestJump = false;
+                _movement.jumpTimeCounter = _movement.jumpTime;
+            }
+
+            if (_movement.requestJump && _movement.blocking && _movement.jumping)
+            {
+                Direction inverse = DirectionHelper.Inverse(_movement.direction);
+
+                float force = 1 * DirectionHelper.ParseFloat(
+                    inverse,
+                    _movement.draggingJumpForce
+                );
+
+                _body.velocity = new Vector3(
+                    force,
+                    1 * _movement.jumpForce
+                );
+
+                _movement.requestJump = false;
+                _movement.jumpTimeCounter = _movement.jumpTime;
+            }
+        }
+
+        /**
+         * <summary>
+         * Handle the direction
+         * </summary>
+         */
+        private void HandleDirection()
+        {
+            if (!_movement.HasChangedDirection)
+                return;
+
+            _movement.direction = DirectionHelper.Inverse(_movement.direction);
+            _renderer.flipX = !_renderer.flipX;
+        }
+        
+        /**
+         * <summary>
+         * Handle dash
+         * </summary>
+         */
+        private void HandleDash()
+        {
+            if (!_movement.requestDash)
+                return;
+
+            _movement.requestDash = false;
+
+            StartCoroutine(Dash());
+        }
+
+        /**
+         * <summary>
+         * Dash the object
+         * </summary>
+         */
+        private IEnumerator Dash()
+        {
+            _movement.dashing = true;
+            _movement.isFrozen = true;
+
+            Vector2 force = DirectionHelper.ToVector2(_movement.direction) * _movement.dashForce;
+
+            _body.AddForce(force, ForceMode2D.Impulse);
+
+            yield return new WaitForSeconds(_movement.dashTime);
+
+            _movement.dashing = false;
+            _movement.isFrozen = false;
         }
 
         /**
@@ -191,6 +270,28 @@ namespace Behaviour
 
         /**
          * <summary>
+         * Test if the object is blocking on a wall
+         * </summary>
+         */
+        private bool IsBlocking()
+        {
+            Vector2 position = new Vector2(
+                transform.position.x,
+                transform.position.y + _movement.wallRaycastOffsetY
+            );
+
+            RaycastHit2D hit = Physics2D.Raycast(
+                position,
+                DirectionHelper.ToVector2(_movement.direction),
+                _movement.wallRaycastLength,
+                _movement.groundLayer
+            );
+
+            return null != hit.collider;
+        }
+
+        /**
+         * <summary>
          * Detect if the object if falling
          * </summary>
          */
@@ -201,6 +302,37 @@ namespace Behaviour
             _previousY = transform.position.y;
 
             return _movement.jumping && fall;
+        }
+
+        /**
+         * <inheritdoc/>
+         */
+        private void OnDrawGizmosSelected()
+        {
+            MovementData movement = GetData<MovementData>();
+
+            if (null == movement)
+                return;
+
+            Gizmos.color          = Color.blue;
+            Vector3 groundTarget = new Vector3(
+                transform.position.x,
+                transform.position.y - movement.groundRaycastLength,
+                transform.position.z
+            );
+            Vector3 wallTarget = new Vector3(
+                transform.position.x + DirectionHelper.ParseFloat(movement.direction, movement.wallRaycastLength),
+                transform.position.y + movement.wallRaycastOffsetY,
+                transform.position.z
+            );
+            Vector3 alteredPosition = new Vector3(
+                transform.position.x,
+                transform.position.y + movement.wallRaycastOffsetY,
+                transform.position.z
+            );
+
+            Gizmos.DrawLine(transform.position, groundTarget);
+            Gizmos.DrawLine(alteredPosition, wallTarget);
         }
 
         # endregion

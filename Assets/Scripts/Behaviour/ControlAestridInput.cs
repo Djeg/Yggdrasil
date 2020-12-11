@@ -44,6 +44,14 @@ namespace Behaviour
 
         /**
          * <summary>
+         * The attack input name
+         * </summary>
+         */
+        [SerializeField]
+        private string _dashInputName = "Dash";
+
+        /**
+         * <summary>
          * A reference to the player input
          * </summary>
          */
@@ -115,14 +123,31 @@ namespace Behaviour
             }
 
             // Handle jump
-            if (_jumpInputName == ctx.action.name && ctx.started)
+            if (_jumpInputName == ctx.action.name && ctx.started && !_movement.jumping)
             {
                 _movement.requestJump = true;
+                _movement.holdingJump = true;
+            }
+
+            if (_jumpInputName == ctx.action.name && ctx.started && _movement.jumping && _movement.blocking)
+            {
+                _movement.requestJump = true;
+                _movement.holdingJump = true;
+            }
+
+            if (_jumpInputName == ctx.action.name && ctx.canceled)
+            {
+                _movement.holdingJump = false;
             }
 
             if (_attackInputName == ctx.action.name && ctx.started)
             {
                 _attacks.requestHit = true;
+            }
+
+            if (_dashInputName == ctx.action.name && ctx.started && !_movement.dashing)
+            {
+                _movement.requestDash = true;
             }
         }
 

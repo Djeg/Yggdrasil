@@ -60,6 +60,14 @@ namespace Behaviour
 
         /**
          * <summary>
+         * The dashing boolean name
+         * </summary>
+         */
+        [SerializeField]
+        private string _dashingBooleanName = "Dashing";
+
+        /**
+         * <summary>
          * A reference to the animator
          * </summary>
          */
@@ -141,6 +149,12 @@ namespace Behaviour
             _animator.SetBool(
                 _fallingBooleanName,
                 _movement.falling
+            );
+
+            // Set the dashing boolean
+            _animator.SetBool(
+                _dashingBooleanName,
+                _movement.dashing
             );
 
             if (_attacks.IsTriggered)

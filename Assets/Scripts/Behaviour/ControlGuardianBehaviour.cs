@@ -263,11 +263,8 @@ namespace Behaviour
          */
         private void OnDrawGizmosSelected()
         {
-            if (null == _guardian)
-                _guardian = GetData<GuardianData>();
-
-            if (null == _movement)
-                _movement = GetData<MovementData>();
+            _guardian = GetData<GuardianData>();
+            _movement = GetData<MovementData>();
 
             if (!_guardian.debug)
                 return;
@@ -300,11 +297,8 @@ namespace Behaviour
         private void DrawBeacons()
         {
             Gizmos.color = Color.blue;
-            Vector2 position = BeaconPosition;
-
-            // Draw the left beacon
             Vector3 center = new Vector3(
-                position.x,
+                transform.position.x - _guardian.leftBeaconRange,
                 transform.position.y - .25f,
                 transform.position.z
             );
@@ -316,7 +310,7 @@ namespace Behaviour
 
             // Draw the right beacon
             Vector3 center2 = new Vector3(
-                position.y,
+                transform.position.x + _guardian.rightBeaconRange,
                 transform.position.y - .25f,
                 transform.position.z
             );

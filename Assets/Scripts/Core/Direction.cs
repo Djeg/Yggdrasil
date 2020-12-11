@@ -20,6 +20,12 @@ namespace Core
     {
         public static float ToFloat(Direction direction) => (float)(int)direction;
 
+        public static float ParseFloat(Direction direction, float amount) =>
+            direction == Direction.RIGHT || direction == Direction.NONE
+                ? amount
+                : -amount
+        ;
+
         public static Direction Inverse(Direction direction) =>
             direction == Direction.RIGHT
                 ? Direction.LEFT
@@ -35,5 +41,7 @@ namespace Core
                     ? Vector2.left
                     : Vector2.zero
         ;
+
+        public static bool ToBoolean(Direction direction) => direction == Direction.LEFT;
     }
 }
