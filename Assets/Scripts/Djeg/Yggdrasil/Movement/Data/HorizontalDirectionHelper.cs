@@ -62,6 +62,18 @@ namespace Djeg.Yggdrasil.Movement.Data
 
         /**
          * <summary>
+         * Parse a direction and a vector2 value by negating the vector2 x value
+         * when going left.
+         * </summary>
+         */
+        public static Vector2 Parse(HorizontalDirection direction, Vector2 value) =>
+            direction == HorizontalDirection.Left
+                ? new Vector2(-value.x, value.y)
+                : value
+        ;
+
+        /**
+         * <summary>
          * Convert a float to a direction
          * </summary>
          */

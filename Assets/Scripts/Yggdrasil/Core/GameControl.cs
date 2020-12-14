@@ -29,14 +29,6 @@ namespace Yggdrasil.Core
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Jump"",
-                    ""type"": ""Button"",
-                    ""id"": ""bbdb3775-b769-4e18-b488-c3a70b5cb3f0"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press""
-                },
-                {
                     ""name"": ""Attack"",
                     ""type"": ""Button"",
                     ""id"": ""e30c8a84-817e-47c9-8207-e9c20749e654"",
@@ -59,6 +51,30 @@ namespace Yggdrasil.Core
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""JumpPressedInput"",
+                    ""type"": ""Button"",
+                    ""id"": ""e788b843-c00b-47f9-818f-bd7e1f749401"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""JumpReleasedInput"",
+                    ""type"": ""Button"",
+                    ""id"": ""884c5f90-8e9a-4506-afbc-6cf5dd915cd7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)""
+                },
+                {
+                    ""name"": ""AttackInput"",
+                    ""type"": ""Button"",
+                    ""id"": ""6447687a-0a6d-46dd-a11b-86c326487f4c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -171,28 +187,6 @@ namespace Yggdrasil.Core
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""dc984964-6916-4046-84c5-8d55f6b4fedc"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": ""Press"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8d1dc54b-f4a2-4f64-b353-8b7c7aeeb8bb"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": ""Press"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
@@ -391,6 +385,138 @@ namespace Yggdrasil.Core
                     ""action"": ""MoveInput"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Stick2"",
+                    ""id"": ""128186cd-7b6e-45c7-a9b1-aee7a2b4b325"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""d329fb86-8f21-4cf3-9527-372bb79409f4"",
+                    ""path"": ""<Linux::Logic3::DeathstalkerEssential2014>/Stick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""8e4c7c11-94ff-4ca6-bbd1-a2e82a64d4ea"",
+                    ""path"": ""<Linux::Logic3::DeathstalkerEssential2014>/Stick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""6fd67fb1-7b99-41d4-99f6-119c1c9597ee"",
+                    ""path"": ""<Linux::Logic3::DeathstalkerEssential2014>/Stick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""93e453d0-b694-44f8-89b2-5e6b016c7745"",
+                    ""path"": ""<Linux::Logic3::DeathstalkerEssential2014>/Stick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ebb2a36c-564c-4b51-8ed6-1bdd0675b41c"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpPressedInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""75db7b27-a688-47f3-844a-02a8c51f984e"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpPressedInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f591ee40-097e-4698-9e68-169a23c79a00"",
+                    ""path"": ""<Linux::Logic3::DeathstalkerEssential2014>/Y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpPressedInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8b03ddb6-817a-46aa-94f1-7cd758fece09"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpReleasedInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0d1409a5-a001-40f7-8d6a-ec02d7d9363d"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpReleasedInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""edd61387-a084-4fc9-96c8-634323f561cf"",
+                    ""path"": ""<Linux::Logic3::DeathstalkerEssential2014>/Y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpReleasedInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""102a6d4f-0ddb-4494-a952-40f9c5d185b2"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AttackInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -400,10 +526,12 @@ namespace Yggdrasil.Core
             // Plateformer
             m_Plateformer = asset.FindActionMap("Plateformer", throwIfNotFound: true);
             m_Plateformer_Move = m_Plateformer.FindAction("Move", throwIfNotFound: true);
-            m_Plateformer_Jump = m_Plateformer.FindAction("Jump", throwIfNotFound: true);
             m_Plateformer_Attack = m_Plateformer.FindAction("Attack", throwIfNotFound: true);
             m_Plateformer_Dash = m_Plateformer.FindAction("Dash", throwIfNotFound: true);
             m_Plateformer_MoveInput = m_Plateformer.FindAction("MoveInput", throwIfNotFound: true);
+            m_Plateformer_JumpPressedInput = m_Plateformer.FindAction("JumpPressedInput", throwIfNotFound: true);
+            m_Plateformer_JumpReleasedInput = m_Plateformer.FindAction("JumpReleasedInput", throwIfNotFound: true);
+            m_Plateformer_AttackInput = m_Plateformer.FindAction("AttackInput", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -454,19 +582,23 @@ namespace Yggdrasil.Core
         private readonly InputActionMap m_Plateformer;
         private IPlateformerActions m_PlateformerActionsCallbackInterface;
         private readonly InputAction m_Plateformer_Move;
-        private readonly InputAction m_Plateformer_Jump;
         private readonly InputAction m_Plateformer_Attack;
         private readonly InputAction m_Plateformer_Dash;
         private readonly InputAction m_Plateformer_MoveInput;
+        private readonly InputAction m_Plateformer_JumpPressedInput;
+        private readonly InputAction m_Plateformer_JumpReleasedInput;
+        private readonly InputAction m_Plateformer_AttackInput;
         public struct PlateformerActions
         {
             private @GameControl m_Wrapper;
             public PlateformerActions(@GameControl wrapper) { m_Wrapper = wrapper; }
             public InputAction @Move => m_Wrapper.m_Plateformer_Move;
-            public InputAction @Jump => m_Wrapper.m_Plateformer_Jump;
             public InputAction @Attack => m_Wrapper.m_Plateformer_Attack;
             public InputAction @Dash => m_Wrapper.m_Plateformer_Dash;
             public InputAction @MoveInput => m_Wrapper.m_Plateformer_MoveInput;
+            public InputAction @JumpPressedInput => m_Wrapper.m_Plateformer_JumpPressedInput;
+            public InputAction @JumpReleasedInput => m_Wrapper.m_Plateformer_JumpReleasedInput;
+            public InputAction @AttackInput => m_Wrapper.m_Plateformer_AttackInput;
             public InputActionMap Get() { return m_Wrapper.m_Plateformer; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -479,9 +611,6 @@ namespace Yggdrasil.Core
                     @Move.started -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnMove;
                     @Move.performed -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnMove;
                     @Move.canceled -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnMove;
-                    @Jump.started -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnJump;
-                    @Jump.performed -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnJump;
-                    @Jump.canceled -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnJump;
                     @Attack.started -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnAttack;
                     @Attack.performed -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnAttack;
                     @Attack.canceled -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnAttack;
@@ -491,6 +620,15 @@ namespace Yggdrasil.Core
                     @MoveInput.started -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnMoveInput;
                     @MoveInput.performed -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnMoveInput;
                     @MoveInput.canceled -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnMoveInput;
+                    @JumpPressedInput.started -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnJumpPressedInput;
+                    @JumpPressedInput.performed -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnJumpPressedInput;
+                    @JumpPressedInput.canceled -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnJumpPressedInput;
+                    @JumpReleasedInput.started -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnJumpReleasedInput;
+                    @JumpReleasedInput.performed -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnJumpReleasedInput;
+                    @JumpReleasedInput.canceled -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnJumpReleasedInput;
+                    @AttackInput.started -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnAttackInput;
+                    @AttackInput.performed -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnAttackInput;
+                    @AttackInput.canceled -= m_Wrapper.m_PlateformerActionsCallbackInterface.OnAttackInput;
                 }
                 m_Wrapper.m_PlateformerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -498,9 +636,6 @@ namespace Yggdrasil.Core
                     @Move.started += instance.OnMove;
                     @Move.performed += instance.OnMove;
                     @Move.canceled += instance.OnMove;
-                    @Jump.started += instance.OnJump;
-                    @Jump.performed += instance.OnJump;
-                    @Jump.canceled += instance.OnJump;
                     @Attack.started += instance.OnAttack;
                     @Attack.performed += instance.OnAttack;
                     @Attack.canceled += instance.OnAttack;
@@ -510,6 +645,15 @@ namespace Yggdrasil.Core
                     @MoveInput.started += instance.OnMoveInput;
                     @MoveInput.performed += instance.OnMoveInput;
                     @MoveInput.canceled += instance.OnMoveInput;
+                    @JumpPressedInput.started += instance.OnJumpPressedInput;
+                    @JumpPressedInput.performed += instance.OnJumpPressedInput;
+                    @JumpPressedInput.canceled += instance.OnJumpPressedInput;
+                    @JumpReleasedInput.started += instance.OnJumpReleasedInput;
+                    @JumpReleasedInput.performed += instance.OnJumpReleasedInput;
+                    @JumpReleasedInput.canceled += instance.OnJumpReleasedInput;
+                    @AttackInput.started += instance.OnAttackInput;
+                    @AttackInput.performed += instance.OnAttackInput;
+                    @AttackInput.canceled += instance.OnAttackInput;
                 }
             }
         }
@@ -517,10 +661,12 @@ namespace Yggdrasil.Core
         public interface IPlateformerActions
         {
             void OnMove(InputAction.CallbackContext context);
-            void OnJump(InputAction.CallbackContext context);
             void OnAttack(InputAction.CallbackContext context);
             void OnDash(InputAction.CallbackContext context);
             void OnMoveInput(InputAction.CallbackContext context);
+            void OnJumpPressedInput(InputAction.CallbackContext context);
+            void OnJumpReleasedInput(InputAction.CallbackContext context);
+            void OnAttackInput(InputAction.CallbackContext context);
         }
     }
 }

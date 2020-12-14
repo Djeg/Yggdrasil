@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using Djeg.Yggdrasil.Movement.Data;
 
@@ -18,21 +20,52 @@ namespace Djeg.Yggdrasil.Movement.Component
 
         /**
          * <summary>
+         * Contains all the diferent state of an horizontal movement.
+         * </summary>
+         */
+        public enum MovementState
+        {
+            Idle,
+            Walk,
+            Run
+        }
+
+        /**
+         * <summary>
          * The speed of the horizontal movement
          * </summary>
          */
         [SerializeField]
+        [Header("Parameters")]
         [Tooltip("The speed")]
         private float _speed = 410f;
 
         /**
          * <summary>
-         * The 
+         * The
          * </summary>
          */
         [SerializeField]
         [Tooltip("The smooth amount")]
         private float _smooth = 0.15f;
+
+        /**
+         * <summary>
+         * The idle limit
+         * </summary>
+         */
+        [SerializeField]
+        [Range(0f, 1f)]
+        private float _idleLimit = 0.1f;
+
+        /**
+         * <summary>
+         * Walking limit
+         * </summary>
+         */
+        [SerializeField]
+        [Range(0f, 1f)]
+        private float _walkLimit = 0.3f;
 
         /**
          * <summary>
@@ -44,6 +77,55 @@ namespace Djeg.Yggdrasil.Movement.Component
 
         /**
          * <summary>
+         * Flip the sprite when changing direction
+         * </summary>
+         */
+        [SerializeField]
+        private bool _flipSprite = true;
+
+        /**
+         * <summary>
+         * Attach events when this object change direction
+         * </summary>
+         */
+        [SerializeField]
+        [Header("Events")]
+        private OnDirectionChangedEvent _onDirectionChanged = new OnDirectionChangedEvent();
+
+        /**
+         * <summary>
+         * When the object is idling
+         * </summary>
+         */
+        [SerializeField]
+        private OnIdleEvent _onIdle = new OnIdleEvent();
+
+        /**
+         * <summary>
+         * When the object is walking
+         * </summary>
+         */
+        [SerializeField]
+        private OnWalkEvent _onWalk = new OnWalkEvent();
+
+        /**
+         * <summary>
+         * When the object is running
+         * </summary>
+         */
+        [SerializeField]
+        private OnRunEvent _onRun = new OnRunEvent();
+
+        /**
+         * <summary>
+         * Dispatched on each frame when this object is not idle
+         * </summary>
+         */
+        [SerializeField]
+        private OnMoveEvent _onMove = new OnMoveEvent();
+
+        /**
+         * <summary>
          * The current movement. Must be a number between -1 for left and 1 for right.
          * </summary>
          */
@@ -51,11 +133,10 @@ namespace Djeg.Yggdrasil.Movement.Component
 
         /**
          * <summary>
-         * Flip the sprite when changing direction
+         * The current state
          * </summary>
          */
-        [SerializeField]
-        private bool _flipSprite = true;
+        private MovementState _state = MovementState.Idle;
 
         /**
          * <summary>
@@ -129,9 +210,67 @@ namespace Djeg.Yggdrasil.Movement.Component
             set => _currentMovement = value;
         }
 
+        /**
+         * <summary>
+         * Retrieve the current movement state
+         * </summary>
+         */
+        public MovementState State { get => _state; }
+
+        /**
+         * <summary>
+         * Retrieve the OnDirectionChanged event
+         * </summary>
+         */
+        public OnDirectionChangedEvent OnDirectionChanged { get => _onDirectionChanged; }
+
+        /**
+         * <summary>
+         * Retrieve the OnIdleEvent event
+         * </summary>
+         */
+        public OnIdleEvent OnIdle { get => _onIdle; }
+
+        /**
+         * <summary>
+         * Retrieve OnWalkEvent
+         * </summary>
+         */
+        public OnWalkEvent OnWalk { get => _onWalk; }
+
+        /**
+         * <summary>
+         * Get the OnRunEvent
+         * </summary>
+         */
+        public OnRunEvent OnRun { get => _onRun; }
+
+        /**
+         * <summary>
+         * Get the OnMoveEvent
+         * </summary>
+         */
+        public OnMoveEvent OnMove { get => _onMove; }
+
         # endregion
 
         # region PublicMethods
+
+        /**
+         * <summary>
+         * Request a direction changement
+         * </summary>
+         */
+        public void FlipDirection()
+        {
+            HorizontalDirection oldDirection = _direction;
+            _direction = HorizontalDirectionHelper.Inverse(_direction);
+
+            _renderer.flipX = !_renderer.flipX;
+
+            OnDirectionChanged.Invoke(oldDirection, _direction);
+        }
+
         # endregion
 
         # region PrivateMethods
@@ -150,7 +289,27 @@ namespace Djeg.Yggdrasil.Movement.Component
          */
         private void FixedUpdate()
         {
-            float movement = _currentMovement * _speed * Time.fixedDeltaTime;
+            UpdateVelocity();
+            UpdateDirection();
+            UpdateMovementState();
+            InvokeOnMove();
+        }
+
+        /**
+         * <summary>
+         * Invoke on move event if the state isn't idle
+         * </summary>
+         */
+        private void InvokeOnMove() => OnMove.Invoke();
+
+        /**
+         * <summary>
+         * Update the body velocity
+         * </summary>
+         */
+        private void UpdateVelocity()
+        {
+            float movement = _currentMovement * _speed * Time.deltaTime;
             Vector2 target = new Vector2(movement, _body.velocity.y);
 
             _body.velocity = Vector2.SmoothDamp(
@@ -159,20 +318,77 @@ namespace Djeg.Yggdrasil.Movement.Component
                 ref _dampVelocity,
                 _smooth
             );
+        }
 
-            if (!_flipSprite)
-                return;
-
+        /**
+         * <summary>
+         * Update the direction
+         * </summary>
+         */
+        private void UpdateDirection()
+        {
             if (
                 (_direction == HorizontalDirection.Right && _currentMovement < 0f)
                 || (_direction == HorizontalDirection.Left && _currentMovement > 0f)
             ) {
-                _renderer.flipX = !_renderer.flipX;
-                _direction      = HorizontalDirectionHelper.FromFloat(
+                HorizontalDirection oldDirection = _direction;
+
+                if (_flipSprite)
+                    _renderer.flipX = !_renderer.flipX;
+
+                _direction = HorizontalDirectionHelper.FromFloat(
                     _currentMovement,
                     _direction
                 );
+
+                OnDirectionChanged.Invoke(oldDirection, _direction);
             }
+        }
+
+        /**
+         * <summary>
+         * Update the movement state
+         * </summary>
+         */
+        private void UpdateMovementState()
+        {
+            float movement = Mathf.Abs(_currentMovement);
+
+            if (movement < _idleLimit && _state != MovementState.Idle)
+            {
+                _state = MovementState.Idle;
+
+                OnIdle.Invoke();
+
+                return;
+            }
+
+            if (movement >= _idleLimit && movement < _walkLimit && _state != MovementState.Walk)
+            {
+                _state = MovementState.Walk;
+
+                OnWalk.Invoke();
+
+                return;
+            }
+
+            if (movement >= _walkLimit && _state != MovementState.Run)
+            {
+                _state = MovementState.Run;
+
+                OnRun.Invoke();
+
+                return;
+            }
+        }
+
+        /**
+         * <inheritdoc/>
+         */
+        private void OnDisable()
+        {
+            _body.velocity = new Vector2(0, _body.velocity.y);
+            _dampVelocity = Vector2.zero;
         }
 
         /**
@@ -188,5 +404,30 @@ namespace Djeg.Yggdrasil.Movement.Component
         }
 
         # endregion
+    }
+
+    [Serializable]
+    public sealed class OnDirectionChangedEvent : UnityEvent<HorizontalDirection, HorizontalDirection>
+    {
+    }
+
+    [Serializable]
+    public sealed class OnIdleEvent : UnityEvent
+    {
+    }
+
+    [Serializable]
+    public sealed class OnWalkEvent : UnityEvent
+    {
+    }
+
+    [Serializable]
+    public sealed class OnRunEvent : UnityEvent
+    {
+    }
+
+    [Serializable]
+    public sealed class OnMoveEvent : UnityEvent
+    {
     }
 }

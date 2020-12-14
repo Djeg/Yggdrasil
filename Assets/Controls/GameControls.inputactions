@@ -14,14 +14,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "bbdb3775-b769-4e18-b488-c3a70b5cb3f0",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press"
-                },
-                {
                     "name": "Attack",
                     "type": "Button",
                     "id": "e30c8a84-817e-47c9-8207-e9c20749e654",
@@ -44,6 +36,30 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "JumpPressedInput",
+                    "type": "Button",
+                    "id": "e788b843-c00b-47f9-818f-bd7e1f749401",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "JumpReleasedInput",
+                    "type": "Button",
+                    "id": "884c5f90-8e9a-4506-afbc-6cf5dd915cd7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)"
+                },
+                {
+                    "name": "AttackInput",
+                    "type": "Button",
+                    "id": "6447687a-0a6d-46dd-a11b-86c326487f4c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -156,28 +172,6 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "dc984964-6916-4046-84c5-8d55f6b4fedc",
-                    "path": "<Keyboard>/space",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8d1dc54b-f4a2-4f64-b353-8b7c7aeeb8bb",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
@@ -376,6 +370,138 @@
                     "action": "MoveInput",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "Stick2",
+                    "id": "128186cd-7b6e-45c7-a9b1-aee7a2b4b325",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveInput",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "d329fb86-8f21-4cf3-9527-372bb79409f4",
+                    "path": "<Linux::Logic3::DeathstalkerEssential2014>/Stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveInput",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "8e4c7c11-94ff-4ca6-bbd1-a2e82a64d4ea",
+                    "path": "<Linux::Logic3::DeathstalkerEssential2014>/Stick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveInput",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "6fd67fb1-7b99-41d4-99f6-119c1c9597ee",
+                    "path": "<Linux::Logic3::DeathstalkerEssential2014>/Stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveInput",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "93e453d0-b694-44f8-89b2-5e6b016c7745",
+                    "path": "<Linux::Logic3::DeathstalkerEssential2014>/Stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveInput",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "ebb2a36c-564c-4b51-8ed6-1bdd0675b41c",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JumpPressedInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "75db7b27-a688-47f3-844a-02a8c51f984e",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JumpPressedInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f591ee40-097e-4698-9e68-169a23c79a00",
+                    "path": "<Linux::Logic3::DeathstalkerEssential2014>/Y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JumpPressedInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8b03ddb6-817a-46aa-94f1-7cd758fece09",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JumpReleasedInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0d1409a5-a001-40f7-8d6a-ec02d7d9363d",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JumpReleasedInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "edd61387-a084-4fc9-96c8-634323f561cf",
+                    "path": "<Linux::Logic3::DeathstalkerEssential2014>/Y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JumpReleasedInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "102a6d4f-0ddb-4494-a952-40f9c5d185b2",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AttackInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

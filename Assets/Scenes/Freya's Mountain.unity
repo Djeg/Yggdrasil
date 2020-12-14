@@ -212,7 +212,6 @@ GameObject:
   m_Component:
   - component: {fileID: 307003037}
   - component: {fileID: 307003038}
-  - component: {fileID: 307003040}
   - component: {fileID: 307003039}
   m_Layer: 11
   m_Name: FreyasMountainsBackground.Cloud
@@ -294,31 +293,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 307003036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 264d206977b177dc88aa6fc566f52c67, type: 3}
+  m_Script: {fileID: 11500000, guid: 01425554e2f1e7a8e89b4222780c40e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &307003040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307003036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a9c3ea397763be4904494eb67ea339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _parallax:
-    scrollingIntensity: {x: 0.8, y: 0.85}
-    movementIntensity: {x: -1, y: 0}
-    repeatX: 1
-    repeatY: 1
-    mainCamera: {fileID: 519420031}
-    lastCameraPosition: {x: 0, y: 0, z: 0}
-    cameraTransform: {fileID: 0}
-    textureUnitSizeX: 0
-    textureUnitSizeY: 0
+  _scrollingIntensity: {x: 0.8, y: 0.9}
+  _movementIntensity: {x: -0.25, y: 0}
+  _repeatX: 1
+  _repeatY: 1
+  _mainCamera: {fileID: 519420031}
 --- !u!1 &405148300
 GameObject:
   m_ObjectHideFlags: 0
@@ -4436,12 +4418,11 @@ GameObject:
   - component: {fileID: 637875157}
   - component: {fileID: 637875161}
   - component: {fileID: 637875163}
-  - component: {fileID: 637875166}
-  - component: {fileID: 637875164}
   - component: {fileID: 637875162}
-  - component: {fileID: 637875168}
-  - component: {fileID: 637875167}
+  - component: {fileID: 637875164}
   - component: {fileID: 637875165}
+  - component: {fileID: 637875166}
+  - component: {fileID: 637875167}
   m_Layer: 10
   m_Name: Aestrid
   m_TagString: Untagged
@@ -4476,11 +4457,11 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 3
+  m_UseAutoMass: 1
+  m_Mass: 1.2862673
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: ebb00e3567f9d6ef1b1f6b24db35d69e, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -4578,12 +4559,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 637875156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47e6d5fa72f8aee2823ebd2aaeaf019, type: 3}
+  m_Script: {fileID: 11500000, guid: f1f5441fcc39a348e916965f54201f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveInputName: Move
-  _jumpInputName: Jump
-  _attackInputName: Attack
+  _speed: 370.18
+  _smooth: 0.1
+  _idleLimit: 0.1
+  _walkLimit: 0.3
+  _direction: 1
+  _flipSprite: 1
+  _onDirectionChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  _onIdle:
+    m_PersistentCalls:
+      m_Calls: []
+  _onWalk:
+    m_PersistentCalls:
+      m_Calls: []
+  _onRun:
+    m_PersistentCalls:
+      m_Calls: []
+  _onMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &637875163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4598,7 +4597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 185c35333a0fe75858b66ebc8705b927,
     type: 3}
-  m_NotificationBehavior: 3
+  m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -4639,14 +4638,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 637875156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: add4f4da86b533fcf8ccc4f50556c12e, type: 3}
+  m_Script: {fileID: 11500000, guid: c735e676a6bd09b979010efe03962fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _horizontalMovementFloatName: HorizontalMovement
-  _jumpingBooleanName: Jumping
-  _fallingBooleanName: Falling
-  _attackTriggerName: Attack
-  _isAttackingBoolName: Attacking
+  _force: 8
+  _duration: 0.2
+  _raycastLength: 1.52
+  _layer:
+    serializedVersion: 2
+    m_Bits: 256
+  _debugColor: {r: 0.8682375, g: 0, b: 1, a: 1}
+  _onRise:
+    m_PersistentCalls:
+      m_Calls: []
+  _onLand:
+    m_PersistentCalls:
+      m_Calls: []
+  _onFall:
+    m_PersistentCalls:
+      m_Calls: []
+  _onJump:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &637875165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4656,9 +4669,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 637875156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4939a017e9d8bfe898b7cae2fdeea784, type: 3}
+  m_Script: {fileID: 11500000, guid: 45c2a6e87de35b01ab5dde79e751c513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _intensity: 20.2
+  _pushForce: 20
+  _draggedJumpTime: 0.302
+  _raycastLength: 0.83
+  _raycastOffsetY: -1.4
+  _raycastOffsetX: -0.41
+  _debugColor: {r: 0, g: 0.88423395, b: 1, a: 1}
+  _onDragStart:
+    m_PersistentCalls:
+      m_Calls: []
+  _onDragEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  _onDragJump:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &637875166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4668,114 +4697,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 637875156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60338107887f3fad6a7b61abf8a1d0f1, type: 3}
+  m_Script: {fileID: 11500000, guid: ca83814bcba4439d38448e6af5a2eac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movement:
-    speed: 410
-    smoothTime: 0.1
-    isFrozen: 0
-    currentMovement: 0
-    direction: 1
-    currentVelocity: {x: 0, y: 0}
-    velocity: {x: 0, y: 0}
-    jumpForce: 8.7
-    jumpTime: 0.2
-    dragIntensity: 10
-    draggingJumpForce: 15
-    jumping: 0
-    falling: 0
-    blocking: 0
-    dragging: 0
-    groundRaycastLength: 1.5
-    wallRaycastLength: 0.38
-    wallRaycastOffsetY: -0.9
-    groundLayer:
-      serializedVersion: 2
-      m_Bits: 256
-    requestJump: 0
-    holdingJump: 0
-    jumpTimeCounter: 0
   _attacks:
-    layer:
-      serializedVersion: 2
-      m_Bits: 512
-    boxes:
-    - offsetX: 0.33
-      offsetY: -0.2
-      radius: 1.007
-      isFrozenMovement: 1
-      canBeInterupted: 0
-      pulseForce: {x: 15, y: 0}
-      force: {x: 40, y: 40}
-      automaticPulse: 0
-      debug: 0
-      color: {r: 0.7372549, g: 0, b: 0, a: 1}
-      onHit:
-        m_PersistentCalls:
-          m_Calls: []
-      requestHit: 0
-    - offsetX: 0.11
-      offsetY: -0.19
-      radius: 1.101
-      isFrozenMovement: 1
-      canBeInterupted: 0
-      pulseForce: {x: 10, y: 0}
-      force: {x: 40, y: 40}
-      automaticPulse: 1
-      debug: 0
-      color: {r: 1, g: 0, b: 0, a: 1}
-      onHit:
-        m_PersistentCalls:
-          m_Calls: []
-      requestHit: 0
-    - offsetX: 0.73
-      offsetY: -0.39
-      radius: 0.708
-      isFrozenMovement: 1
-      canBeInterupted: 0
-      pulseForce: {x: 35, y: 0}
-      force: {x: 40, y: 40}
-      automaticPulse: 1
-      debug: 0
-      color: {r: 1, g: 0, b: 0, a: 1}
-      onHit:
-        m_PersistentCalls:
-          m_Calls: []
-      requestHit: 0
-    - offsetX: 0
-      offsetY: -0.15
-      radius: 1.133
-      isFrozenMovement: 1
-      canBeInterupted: 0
-      pulseForce: {x: 20, y: 0}
-      force: {x: 40, y: 40}
-      automaticPulse: 1
-      debug: 0
-      color: {r: 1, g: 0, b: 0, a: 1}
-      onHit:
-        m_PersistentCalls:
-          m_Calls: []
-      requestHit: 0
-    index: 0
-    isFrozen: 0
-    requestHit: 0
-  _stat:
-    maxHealth: 100
-    health: 100
-    maxDamage: 12
-    criticalRange: 0
-    criticalModifier: 3
-    invincible: 0
-    onTakingDamage:
-      m_PersistentCalls:
-        m_Calls: []
-    onHeal:
-      m_PersistentCalls:
-        m_Calls: []
-    onDie:
-      m_PersistentCalls:
-        m_Calls: []
+  - position: {x: 0.72, y: -0.27}
+    radius: 1
+    impulse: {x: 0.5, y: 0}
+    force: {x: 0, y: 0}
+    debug: 0
+    debugColor: {r: 1, g: 0, b: 0, a: 1}
+  - position: {x: 0.09, y: -0.13}
+    radius: 1.19
+    impulse: {x: 0.5, y: 0}
+    force: {x: 0, y: 0}
+    debug: 0
+    debugColor: {r: 1, g: 0, b: 0, a: 1}
+  - position: {x: 0.94, y: -0.37}
+    radius: 0.99
+    impulse: {x: 5, y: 0}
+    force: {x: 0, y: 0}
+    debug: 0
+    debugColor: {r: 1, g: 0, b: 0, a: 1}
+  - position: {x: 0, y: -0.15}
+    radius: 1.3
+    impulse: {x: 1, y: 0}
+    force: {x: 0, y: 0}
+    debug: 0
+    debugColor: {r: 1, g: 0, b: 0, a: 1}
+  _layer:
+    serializedVersion: 2
+    m_Bits: 512
+  _onAttackStart:
+    m_PersistentCalls:
+      m_Calls: []
+  _onAttackHit:
+    m_PersistentCalls:
+      m_Calls: []
+  _onAttackRelease:
+    m_PersistentCalls:
+      m_Calls: []
+  _onAttackEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &637875167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4785,23 +4749,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 637875156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eec078bb60a77161aeda6af7cd9c5da, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cc8980dd4b91641ba7eaef01312645c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &637875168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 637875156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2c1bca4ca84747a891c24128da1003, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damagePrefabs: {fileID: 6037996846885485732, guid: 972f42c24d4fce254b6a22aa856fe085,
-    type: 3}
+  _movementParameterName: Movement
+  _runningParameterName: Running
+  _jumpingParameterName: Jumping
+  _fallingParameterName: Falling
+  _attackParameterName: Attack
+  _attackingParameterName: Attacking
+  _dashingParameterName: Dashing
 --- !u!1 &681477639
 GameObject:
   m_ObjectHideFlags: 0
@@ -5584,7 +5541,6 @@ GameObject:
   m_Component:
   - component: {fileID: 808852609}
   - component: {fileID: 808852610}
-  - component: {fileID: 808852612}
   - component: {fileID: 808852611}
   m_Layer: 11
   m_Name: FreyasMountainsBackground.MoutainFront
@@ -5666,31 +5622,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 808852608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 264d206977b177dc88aa6fc566f52c67, type: 3}
+  m_Script: {fileID: 11500000, guid: 01425554e2f1e7a8e89b4222780c40e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &808852612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 808852608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a9c3ea397763be4904494eb67ea339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _parallax:
-    scrollingIntensity: {x: 0.5, y: 0.8}
-    movementIntensity: {x: 0, y: 0}
-    repeatX: 1
-    repeatY: 0
-    mainCamera: {fileID: 519420031}
-    lastCameraPosition: {x: 0, y: 0, z: 0}
-    cameraTransform: {fileID: 0}
-    textureUnitSizeX: 0
-    textureUnitSizeY: 0
+  _scrollingIntensity: {x: 0.65, y: 0.9}
+  _movementIntensity: {x: 0, y: 0}
+  _repeatX: 1
+  _repeatY: 0
+  _mainCamera: {fileID: 519420031}
 --- !u!1 &931191907
 GameObject:
   m_ObjectHideFlags: 0
@@ -5767,7 +5706,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1011176664}
   - component: {fileID: 1011176665}
-  - component: {fileID: 1011176667}
   - component: {fileID: 1011176666}
   m_Layer: 11
   m_Name: FreyasMountainsBackground.Cloud (1)
@@ -5849,31 +5787,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1011176663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 264d206977b177dc88aa6fc566f52c67, type: 3}
+  m_Script: {fileID: 11500000, guid: 01425554e2f1e7a8e89b4222780c40e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1011176667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011176663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a9c3ea397763be4904494eb67ea339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _parallax:
-    scrollingIntensity: {x: 0.6, y: 0.825}
-    movementIntensity: {x: 2, y: 0}
-    repeatX: 1
-    repeatY: 1
-    mainCamera: {fileID: 519420031}
-    lastCameraPosition: {x: 0, y: 0, z: 0}
-    cameraTransform: {fileID: 0}
-    textureUnitSizeX: 0
-    textureUnitSizeY: 0
+  _scrollingIntensity: {x: 0.7, y: 0.9}
+  _movementIntensity: {x: 0.5, y: 0}
+  _repeatX: 1
+  _repeatY: 1
+  _mainCamera: {fileID: 519420031}
 --- !u!1 &1055911989
 GameObject:
   m_ObjectHideFlags: 0
@@ -6033,7 +5954,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157831647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.8, y: 1.4127996, z: -10}
+  m_LocalPosition: {x: 4.8, y: 1.4127998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1340740122}
@@ -6130,12 +6051,12 @@ MonoBehaviour:
   m_ScreenY: 0.644
   m_CameraDistance: 10
   m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0.024
+  m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.601
-  m_BiasX: -0.013999976
+  m_SoftZoneHeight: 0.35
+  m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
@@ -6271,8 +6192,6 @@ GameObject:
   - component: {fileID: 2003541986}
   - component: {fileID: 2003541988}
   - component: {fileID: 2003541987}
-  - component: {fileID: 2003541990}
-  - component: {fileID: 2003541989}
   m_Layer: 5
   m_Name: Bar
   m_TagString: Untagged
@@ -6336,33 +6255,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003541985}
   m_CullTransparentMesh: 0
---- !u!114 &2003541989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003541985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16447288f7c93a53ba6d4df823ee747d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _subject: {fileID: 637875156}
-  _maxValueFieldName: maxHealth
-  _currentValueFieldName: health
---- !u!114 &2003541990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003541985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4e5509605a360d888705bddcc78e50a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2075352917
 GameObject:
   m_ObjectHideFlags: 0
@@ -6373,7 +6265,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2075352918}
   - component: {fileID: 2075352919}
-  - component: {fileID: 2075352921}
   - component: {fileID: 2075352920}
   m_Layer: 11
   m_Name: FreyasMountainsBackground.MoutainBack
@@ -6455,31 +6346,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2075352917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 264d206977b177dc88aa6fc566f52c67, type: 3}
+  m_Script: {fileID: 11500000, guid: 01425554e2f1e7a8e89b4222780c40e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2075352921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075352917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a9c3ea397763be4904494eb67ea339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _parallax:
-    scrollingIntensity: {x: 0.9, y: 0.9}
-    movementIntensity: {x: 0, y: 0}
-    repeatX: 1
-    repeatY: 0
-    mainCamera: {fileID: 519420031}
-    lastCameraPosition: {x: 0, y: 0, z: 0}
-    cameraTransform: {fileID: 0}
-    textureUnitSizeX: 0
-    textureUnitSizeY: 0
+  _scrollingIntensity: {x: 0.9, y: 0.9}
+  _movementIntensity: {x: 0, y: 0}
+  _repeatX: 1
+  _repeatY: 0
+  _mainCamera: {fileID: 519420031}
 --- !u!1 &2091576890
 GameObject:
   m_ObjectHideFlags: 0
